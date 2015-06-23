@@ -23,7 +23,8 @@
 <br>
 
 <%= link_to 'New Student', new_student_path %>
-<%= link_to 'Login with GitHub', 'https://github.com/login/oauth/authorize?client_id=b698ad5804c807d9e188&redirect_uri=http://localhost:3000/students' %>
+<%= link_to 'Login with GitHub', 'https://github.com/login/oauth/authorize?client_id=b698ad5804c807d9e188&redirect_uri=http://localhost:3000/students&state=uhoqerhluqewr;tilhqr40r84ut08o34wty43' %>
 
-<%= @code %><br /><br />
-<%= @response.inspect %>
+<p>Handshake Code: <%= @code %></p>
+<p>GitHub Response: <%= @response.inspect %></p>
+<p>Data: <%= @data %></p>

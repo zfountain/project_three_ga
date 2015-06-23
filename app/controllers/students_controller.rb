@@ -11,17 +11,19 @@ class StudentsController < ApplicationController
     @code = options_params()
 
     @options = {
-      body: {
-        pear: {
-          client_id: 'b698ad5804c807d9e188',
-          client_secret: 'b3a1eafd50341af17d3accaa6cbbb0f2da406610',
-          code: @code,
-          redirect_uri: 'http://localhost:3000/students'
-        }
-      }
+      client_id: 'b698ad5804c807d9e188',
+      client_secret: 'b3a1eafd50341af17d3accaa6cbbb0f2da406610',
+      code: @code,
+      redirect_uri: 'http://localhost:3000/students',
+      state: 'uhoqerhluqewr;tilhqr40r84ut08o34wty43'
     }
 
-    @response = HTTParty.post('https://github.com/login/oauth/access_token', @options)
+    @response = HTTParty.get('https://github.com/login/oauth/access_token', :body => @options)
+    # if @response.code == 200
+    #   session[:github_login] = @response.inspect
+
+    # @session = sessions_params()
+    # @data = HTTParty.get('https://api.github.com/user', :body => @response)
 
   end
 
@@ -90,8 +92,13 @@ class StudentsController < ApplicationController
       params[:student]
     end
 
-    # Callback code from GitHub API
+    # Callback code parameter from GitHub API
     def options_params
       params[:code]
+    end
+
+    # Session parameter
+    def sessions_params
+      params[:github_id]
     end
 end
