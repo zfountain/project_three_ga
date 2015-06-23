@@ -8,18 +8,15 @@
 </div>
 
 <div id="two">
-    <div id="homework">
-        <h2>Welcome, Alejandra!</h2>
-        <h3>Do your homework!</h3>
-  <h1>Listing Assignments</h1>
-      <% @assignments.each do |assignment| %>
-      <ul>
-        <li><%= assignment.date_name %></li>
-      </ul>
-      <% end %>
+  <div id="homework">
+    <h2>Welcome, Alejandra!</h2>
+    <h3>Do your homework!</h3>
+    <% @assignments.each do |assignment| %>
+    <ul>
+      <li><%= assignment.date_name %></li>
+    </ul>
+    <% end %>
 
-  <%= link_to 'New Assignment', new_assignment_path %>
-
-    </div>
+  </div>
 </div>
 

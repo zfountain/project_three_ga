@@ -4,7 +4,7 @@ class ReconciliationsController < ApplicationController
   # GET /reconciliations
   # GET /reconciliations.json
   def index
-    @assignments = Assignment.all
+    @assignments = Assignment.where("assignments.id not in (select assignment_id from homeworks)")
   end
 
   # GET /reconciliations/1
