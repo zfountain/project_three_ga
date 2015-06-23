@@ -1,8 +1,14 @@
 # GA Group 2 - Project Three
 Github homework reconciliation application using GitHub API and OAuth.
 
+### Specs
 
-### Team Members
+Gems:
+- PG
+- HTTParty
+
+
+###### Team Members
 - Elias Carlston
 - James Rutledge
 - Zach Fountain
