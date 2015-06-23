@@ -4,7 +4,8 @@ class ReconciliationsController < ApplicationController
   # GET /reconciliations
   # GET /reconciliations.json
   def index
-    @marked_incomplete = Assignment.includes(:homeworks).where(homeworks: { complete: false, student_id: 1 })
+    @logged_in_user = Student.find_by github_id: params[:github_id]
+    @marked_incomplete = Assignment.includes(:homeworks).where(homeworks: { complete: false, student_id: @logged_in_user.id })
     @no_match = Assignment.includes(:homeworks).where(homeworks: { id: nil })
   end
 

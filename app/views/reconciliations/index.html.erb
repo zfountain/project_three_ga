@@ -9,7 +9,7 @@
 
 <div id="two">
   <div id="homework">
-    <h2>Welcome, Alejandra!</h2>
+    <h2>Welcome, <%= params[:github_id] %></h2>
     <h3>Do your homework!</h3>
     <% @marked_incomplete.each do |assignment| %>
     <ul>
