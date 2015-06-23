@@ -11,9 +11,14 @@
   <div id="homework">
     <h2>Welcome, Alejandra!</h2>
     <h3>Do your homework!</h3>
-    <% @assignments.each do |assignment| %>
+    <% @marked_incomplete.each do |assignment| %>
     <ul>
-      <li><%= assignment.date_name %></li>
+      <li><%= assignment.homeworks.inspect %></li>
+    </ul>
+    <% end %>
+    <% @no_match.each do |assignment| %>
+    <ul>
+      <li><%= assignment.homeworks.inspect %></li>
     </ul>
     <% end %>
 
