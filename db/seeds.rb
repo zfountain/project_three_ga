@@ -10,117 +10,117 @@
 # ### STUDENTS TABLE SEEDING:
 
 elias = Student.new({
-    :github_id => 656825,
+    :github_username => 656825,
     :real_name => "Elias Carlston"
     })
 elias.save
 michael = Student.new({
-    :github_id => 11218963,
+    :github_username => 11218963,
     :real_name => "Michael Neal"
     })
 michael.save
 caren = Student.new({
-    :github_id => 5167657,
+    :github_username => 5167657,
     :real_name => "Caren Garcia"
     })
 caren.save
 zach = Student.new({
-    :github_id => 10704308,
+    :github_username => 10704308,
     :real_name => "Zach Fountain"
     })
 zach.save
 alejandra = Student.new({
-    :github_id => 11967578,
+    :github_username => 11967578,
     :real_name => "Alejandra Chapa"
     })
 alejandra.save
 tony = Student.new({
-    :github_id => 11972837,
+    :github_username => 11972837,
     :real_name => "Tony Dominguez"
     })
 tony.save
 james = Student.new({
-    :github_id => 909292,
+    :github_username => 909292,
     :real_name => "James Rutledge"
     })
 james.save
 # al = Student.new({
-#     :github_id => 10876349,
+#     :github_username => 10876349,
 #     :real_name => "Al Mortada"
 #     })
 # al.save
 # courtney = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Courtney Regensburger"
 #     })
 # courtney.save
 # walker = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Walker Flieller"
 #     })
 # walker.save
 # nancy = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Nancy Valladares"
 #     })
 # nancy.save
 # wendi = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Wendi Donaldson-Speciale"
 #     })
 # wendi.save
 # wes = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Wes Hoover"
 #     })
 # wes.save
 # max = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Max DePriest"
 #     })
 # max.save
 # nathan = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Nathan Bloom"
 #     })
 # nathan.save
 # mike = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Mike Dang"
 #     })
 # mike.save
 # sean = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Sean Shannon"
 #     })
 # sean.save
 # clint = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Clint Espinoza"
 #     })
 # clint.save
 # daniel = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Daniel Rendon"
 #     })
 # daniel.save
 # heidi = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Heidi Poon"
 #     })
 # heidi.save
 # miguel = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Miguel Solano"
 #     })
 # miguel.save
 # matt_t = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Matt Thomas"
 #     })
 # matt_t.save
 # matt_d = Student.new({
-#     :github_id => ,
+#     :github_username => ,
 #     :real_name => "Matt Duncan"
 #     })
 # matt_d.save

@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150623162518) do
   add_index "homeworks", ["student_id"], name: "index_homeworks_on_student_id", using: :btree
 
   create_table "students", force: :cascade do |t|
-    t.string   "github_id"
+    t.string   "github_username"
     t.string   "real_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
