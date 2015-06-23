@@ -23,3 +23,7 @@
 <br>
 
 <%= link_to 'New Student', new_student_path %>
+<%= link_to 'Login with GitHub', 'https://github.com/login/oauth/authorize?client_id=b698ad5804c807d9e188&redirect_uri=http://localhost:3000/students' %>
+
+<%= @code %><br /><br />
+<%= @response.inspect %>

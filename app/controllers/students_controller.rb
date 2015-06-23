@@ -1,3 +1,5 @@
+require 'HTTParty'
+
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
@@ -5,6 +7,22 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     @students = Student.all
+
+    @code = options_params()
+
+    @options = {
+      body: {
+        pear: {
+          client_id: 'b698ad5804c807d9e188',
+          client_secret: 'b3a1eafd50341af17d3accaa6cbbb0f2da406610',
+          code: @code,
+          redirect_uri: 'http://localhost:3000/students'
+        }
+      }
+    }
+
+    @response = HTTParty.post('https://github.com/login/oauth/access_token', @options)
+
   end
 
   # GET /students/1
@@ -70,5 +88,10 @@ class StudentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
       params[:student]
+    end
+
+    # Callback code from GitHub API
+    def options_params
+      params[:code]
     end
 end
