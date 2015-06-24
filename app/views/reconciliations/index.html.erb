@@ -1,3 +1,4 @@
+<!-- This content will display in the yield portion of layouts/application.html.erb -->
 <div id="one">
     <p id="notice"><%= notice %></p>
     <button class= "btn" type="submit">Sign in with GitHub</button>
@@ -9,13 +10,17 @@
 
 <div id="two">
   <div id="homework">
+    <!-- Pulls in github_id to include in welcome statement -->
     <h2>Welcome, <%= params[:github_id] %></h2>
     <h3>Do your homework!</h3>
+    <!-- Pulls information from the reconciliations controller -->
     <% @marked_incomplete.each do |assignment| %>
     <ul>
+    <!-- Assignments are filtered based on completion and student from the reconciliations controller -->
       <li><%= assignment.homeworks.inspect %></li>
     </ul>
     <% end %>
+    <!-- List each new assignment -->
     <% @no_match.each do |assignment| %>
     <ul>
       <li><%= assignment.homeworks.inspect %></li>
